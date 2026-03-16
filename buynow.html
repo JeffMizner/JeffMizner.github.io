@@ -72,6 +72,31 @@
   <main class="px-3">
     <h1>Come Buy My Stuff</h1>
     <p class="lead">These are just a few examples of the coding exercises that I've completed in the Full Stack Web Development with MERN course. Included below is brief overview of each exercise and a link to the GitHub repository.</p>
+    <div id ="buynow-widget-container"></div>
+    <script>
+      window.onload = function() {
+          const buyNowWidgetConfgi = {
+            orderingToken:"rl4u2onisxbgnbyg7vu0pqo1tzh7d0eiontg0thz",
+            brandCode:"APPLEBEES",
+            brandName:"Applebee's",
+            faceplates: [
+              {
+                code: 'DDWUJTFK3',
+                url: 'https://fpastatic.cashstar.com/faceplates/DDWUJTFK3/MASTER-1.jpg'
+              },
+            ],
+            maxPrice: 500,
+            midPrice: 250,
+            minPrice: 1,
+            maxAmountAllowed: 500,
+            environment: "test",
+          };
+
+          const widget = new BuyNowWidget(config);
+          widget.render("#buynow-widget-container");
+      };
+    </script>
+
     <p class="lead">
         <div class="card-group">
             <div class="card bg-light">
